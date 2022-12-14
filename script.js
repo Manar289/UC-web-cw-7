@@ -9,13 +9,15 @@ let random_grade_div = document.getElementById("random-grade");
 /*  الجزء الأول والثاني من التمرين */
 
 
+grades.pop();
+grades.push(99);
 
+grades.forEach(item =>{
+  all_grades_div.innerHTML += `<span>${item}<span>`});
 
+let randomIndex = Math.floor(Math.random() * grades.length);
 
-
-
-
-
+random_grade_div.innerHTML = `<span>#${randomIndex}: ${grades[randomIndex]}<span>` ;
 /* الجزء الثالث من التمرين */
 
 let course = {
@@ -27,11 +29,19 @@ let course = {
 
 //Change studentsCount,track property here
 
+course.studentsCount=40 ;
+course.track="Web";
+
 
 
 //Console log here
+console.log("Hello my name is "+"Manar " + "i'm in" + course.track +course.name );
 
 
+//Create student object here"
 
-//Create student object here
+let student ={
+  name :"Manar",
+  University:"Kuwait university",
+};
 
